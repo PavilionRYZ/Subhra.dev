@@ -8,7 +8,6 @@
   <a href="https://subhradev.netlify.app/" target="_blank">
     <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Now-blueviolet?style=for-the-badge" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/github/stars/your-username/subra-portfolio?style=social" alt="GitHub Stars" />
 </p>
 
 ---
@@ -18,7 +17,7 @@
 Welcome to my personal portfolio! Built with **React**, **Tailwind CSS**, and **Framer Motion**, this site is a reflection of my skills in web development and design. It features a responsive layout, smooth animations, and a dynamic typewriter effect, all crafted to impress and inform.
 
 - **Live Demo**: [subhradev.netlify.app](https://subhradev.netlify.app/)
-- **Repository**: [github.com/your-username/subra-portfolio](https://github.com/your-username/subra-portfolio)
+- **Repository**: [https://github.com/PavilionRYZ/Subhra.dev.git](Subhra.dev)
 
 ---
 
@@ -58,10 +57,8 @@ Welcome to my personal portfolio! Built with **React**, **Tailwind CSS**, and **
 ## 🎨 Preview
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x400.png?text=Portfolio+Screenshot" alt="Portfolio Screenshot" width="80%" />
+  <img src="https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/Screenshot%20(233).png?alt=media&token=6b2c6095-ccb7-4fd6-b717-621839831264" alt="Portfolio Screenshot" width="80%" />
 </p>
-
-*(Replace with an actual screenshot of your portfolio by uploading it to the repo under `screenshots/screenshot.png` and updating the URL.)*
 
 ---
 
@@ -73,19 +70,24 @@ Welcome to my personal portfolio! Built with **React**, **Tailwind CSS**, and **
 
 ### Installation
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/PavilionRYZ/Subhra.dev.git
+   ```
 2. Install dependencies:
-   ```bash
-   npm install
+ ```bash
+npm install
+```
 3. Run locally:
-   ```bash
-   npm run dev
-   <p>Open http://localhost:5173 in your browser.</p>   
+```bash
+npm run dev
+```
+   Open http://localhost:5173 in your browser.
+
 
 4. Build for production:
-bash
+```bash
 npm run build
+```
 
 ### 🌟 Deployment
 Deployed on Netlify for fast, reliable hosting:
@@ -95,7 +97,11 @@ Deployed on Netlify for fast, reliable hosting:
 
 ### 📬 Contact Me
 - Email: subhrasundarsinha21@gmail.com
-- LinkedIn: linkedin.com/in/subhrasundarsinha
-- GitHub: PavilionRYZ
+- LinkedIn: [https://www.linkedin.com/in/subhra-sundar-sinha-779538181/](SubhraSundarSinha)
+- GitHub: [https://github.com/PavilionRYZ](PavilionRYZ)
 - Phone: +91 8597366993
-<p align="center"> <a href="mailto:subhrasundarsinha21@gmail.com"> <img src="https://img.shields.io/badge/Email-Me-red?style=flat&logo=gmail" alt="Email" /> </a> <a href="https://github.com/PavilionRYZ"> <img src="https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github" alt="GitHub" /> </a> </p>
+
+### 📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+<p align="center"> <strong>Made with 💻 and ☕ by Subhra Sundar Sinha</strong> </p> 
