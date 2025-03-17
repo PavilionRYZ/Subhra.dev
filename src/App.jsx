@@ -16,9 +16,9 @@ function App() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <About />
-      <Skills />
-      <Education />
-      <Projects />
+      <Skills darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <Education darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <Projects darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
       <Footer />
     </div>

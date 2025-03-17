@@ -72,7 +72,7 @@ const cardVariants = {
   }),
 };
 
-const Projects = () => {
+const Projects = ({darkMode,setDarkMode}) => {
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       {/* Subtle Background Pattern */}
@@ -112,7 +112,7 @@ const Projects = () => {
             viewport={{ once: true }}
             variants={cardVariants}
             whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 0, 255, 0.3)" }}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all relative overflow-hidden"
+            className= {`${darkMode ? "bg-gray-800" : "bg-gray-100"} p-6 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all relative overflow-hidden`}
           >
             {/* Floating Icons */}
             <div className="absolute top-2 right-2 flex gap-2">
@@ -130,7 +130,7 @@ const Projects = () => {
 
             {/* Project Content */}
             <h3 className="text-xl font-semibold text-blue-400 font-mono mb-2">{project.title}</h3>
-            <p className="text-gray-300 font-mono mb-4">{project.description}</p>
+            <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} font-mono mb-4`}>{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tags.map((tag) => (
                 <span

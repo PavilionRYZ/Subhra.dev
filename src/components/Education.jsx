@@ -36,7 +36,7 @@ const itemVariants = {
   }),
 };
 
-const Education = () => {
+const Education = ({darkMode,setDarkmode}) => {
   return (
     <section id="education" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       {/* Subtle Background Pattern */}
@@ -84,7 +84,7 @@ const Education = () => {
 
               {/* Education Card */}
               <div
-                className={`bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 w-full md:w-5/12 ${
+                className={`${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg border border-gray-700 w-full md:w-5/12 ${
                   index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
                 } hover:border-blue-500 transition-all`}
               >
@@ -92,9 +92,9 @@ const Education = () => {
                   {edu.icon}
                   <h3 className="text-xl font-semibold text-blue-400 font-mono">{edu.institute}</h3>
                 </div>
-                <p className="text-gray-300 font-mono">{edu.level}</p>
-                <p className="text-gray-400 mt-2">Grade: {edu.grade}</p>
-                <p className="text-gray-500">{edu.duration}</p>
+                <p className={`${darkMode ? "text-gray-300" : "text-black"} font-mono`}>{edu.level}</p>
+                <p className={`${darkMode ? "text-gray-400" : "text-black"} mt-2 `}>Grade: {edu.grade}</p>
+                <p className={`${darkMode ? "text-gray-500" : "text-black"}`}>{edu.duration}</p>
               </div>
             </motion.div>
           ))}

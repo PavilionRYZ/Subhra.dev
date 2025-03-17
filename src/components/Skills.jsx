@@ -58,7 +58,7 @@ const floatVariants = {
   },
 };
 
-const Skills = () => {
+const Skills = ({ darkMode, setDarkMode }) => {
   return (
     <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       {/* Subtle Background SVG */}
@@ -92,7 +92,11 @@ const Skills = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 255, 0.2)" }}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all"
+            className={`p-6 rounded-lg shadow-lg border hover:border-blue-500 transition-all ${
+              darkMode ? "bg-gray-700 border-gray-500" : "bg-gray-100 border-gray-300"
+            }`}
+            
+            
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-4 font-mono">{category}</h3>
             <ul className="space-y-4">
@@ -112,7 +116,7 @@ const Skills = () => {
                   >
                     {skill.icon}
                   </motion.div>
-                  <span className="text-gray-300 font-mono">{skill.name}</span>
+                  <span className={`${darkMode ? "text-white" : "text-black"} font-mono`}>{skill.name}</span>
                 </motion.li>
               ))}
             </ul>

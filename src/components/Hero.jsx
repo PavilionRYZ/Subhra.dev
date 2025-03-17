@@ -120,9 +120,9 @@ const Hero = () => {
         </motion.p>
 
         {/* Contact Info */}
-        <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-lg font-mono text-gray-300 break-words">
+        {/* <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-lg font-mono text-gray-300 break-words">
           Siliguri | +91 8597366993 | subhrasundarsinha21@gmail.com
-        </p>
+        </p> */}
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
@@ -130,9 +130,9 @@ const Hero = () => {
             href="#projects"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition-colors"
+            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full"
           >
-            See My Work
+            <p className=" text-white font-semibold transition-colors">See My Work</p>
           </motion.a>
           <motion.a
             href="/Subra_Sundar_Sinha_Resume.pdf"
@@ -142,7 +142,7 @@ const Hero = () => {
             className="px-6 py-3 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors flex items-center justify-center gap-2"
           >
             <FileText className="w-5 h-5" />
-            <span>Download Resume</span>
+            <span className="text-white">Download Resume</span>
           </motion.a>
         </div>
       </motion.div>
