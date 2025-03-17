@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import * as THREE from "three";
 import {
   FaReact,
   FaNodeJs,
@@ -12,26 +13,31 @@ import {
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
 import { FileText } from "lucide-react";
 
-// Typewriter effect hook with slower typing for mobile visibility
-const useTypewriter = (texts, speed = 1, pause = 2000) => {
+// Typewriter effect hook
+const useTypewriter = (texts, speed = 100, pause = 2000) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
   useEffect(() => {
+    const currentText = texts[currentIndex];
     let timeout;
-    if (charIndex < texts[currentIndex].length) {
+
+    if (charIndex < currentText.length) {
+      // Typing phase
       timeout = setTimeout(() => {
-        setDisplayText((prev) => prev + texts[currentIndex][charIndex]);
+        setDisplayText(currentText.substring(0, charIndex + 1));
         setCharIndex((prev) => prev + 1);
       }, speed);
     } else {
+      // Pause and move to next text
       timeout = setTimeout(() => {
         setDisplayText("");
         setCharIndex(0);
         setCurrentIndex((prev) => (prev + 1) % texts.length);
       }, pause);
     }
+
     return () => clearTimeout(timeout);
   }, [charIndex, currentIndex, texts, speed, pause]);
 
@@ -54,62 +60,113 @@ const floatingIcons = [
 const floatVariants = {
   animate: {
     y: [0, -15, 0],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
+    transition: { duration: 2, repeat: Infinity, ease: "easeInOut" },
   },
 };
 
 const Hero = () => {
-  const nameText = useTypewriter(["Subhra Sundar Sinha"], 80, 5000); // Slower typing speed (80ms)
+  const nameText = useTypewriter(["Subhra Sundar Sinha"], 80, 6000);
   const skillsText = useTypewriter(
     ["MERN Stack Developer", "UI/UX Enthusiast", "Web Developer"],
     100,
     2000
   );
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    // Three.js Setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Geometry: Rotating Cubes
+    const cubes = [];
+    const cubeCount = 20;
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshBasicMaterial({
+      color: 0x00ff00,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.3,
+    });
+
+    for (let i = 0; i < cubeCount; i++) {
+      const cube = new THREE.Mesh(geometry, material);
+      cube.position.set(
+        (Math.random() - 0.5) * 20,
+        (Math.random() - 0.5) * 20,
+        (Math.random() - 0.5) * 20
+      );
+      cube.rotation.set(Math.random(), Math.random(), Math.random());
+      scene.add(cube);
+      cubes.push(cube);
+    }
+
+    camera.position.z = 15;
+
+    // Mouse Interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    document.addEventListener("mousemove", (event) => {
+      mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+      mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    // Animation Loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+      cubes.forEach((cube) => {
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        cube.position.z += Math.sin(Date.now() * 0.001 + cube.position.x) * 0.02;
+        if (cube.position.z > 15) cube.position.z = -15; // Loop cubes back
+      });
+
+      // Camera tilt based on mouse
+      camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
+      camera.position.y += (mouseY * 5 - camera.position.y) * 0.05;
+      camera.lookAt(scene.position);
+
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    // Resize Handler
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      renderer.dispose();
+    };
+  }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 relative overflow-hidden">
-      {/* Subtle Particle Background */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="particles" width="50" height="50" patternUnits="userSpaceOnUse">
-              <circle cx="25" cy="25" r="1" fill="white" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#particles)" />
-        </svg>
-      </div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Three.js Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 z-0"
+        style={{ background: "radial-gradient(circle, #1e3a8a, #1e1e2e)" }}
+      />
 
-      {/* Floating Icons */}
-      {floatingIcons.map((item, index) => (
-        <motion.div
-          key={index}
-          className="absolute hidden md:block"
-          style={{ top: item.top, left: item.left, right: item.right }}
-          variants={floatVariants}
-          animate="animate"
-          whileHover={{ scale: 1.2, rotate: 360 }}
-        >
-          {item.icon}
-        </motion.div>
-      ))}
-
+      {/* Content Overlay */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="text-center px-4 z-10 max-w-full"
+        className="relative text-center px-4 z-10 max-w-full"
       >
-        {/* Name with Typewriter Effect */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold font-mono mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 break-words whitespace-pre-wrap min-h-[3rem] sm:min-h-[4rem] md:min-h-[5rem]">
-          {nameText || "Subhra Sundar Sinha"}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold font-mono mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 break-words whitespace-pre-wrap min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem]">
+          {nameText.length === "Subhra Sundar Sinha".length ? "Subhra Sundar Sinha" : nameText || "Subhra Sundar Sinha"}
         </h1>
-
-        {/* Skills with Typewriter Effect */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -118,34 +175,44 @@ const Hero = () => {
         >
           {skillsText || "MERN Stack Developer"}
         </motion.p>
-
-        {/* Contact Info */}
         {/* <p className="mt-4 text-xs sm:text-sm md:text-base lg:text-lg font-mono text-gray-300 break-words">
           Siliguri | +91 8597366993 | subhrasundarsinha21@gmail.com
         </p> */}
-
-        {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full"
+            className="px-6 py-3 bg-blue-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
           >
-            <p className=" text-white font-semibold transition-colors">See My Work</p>
+            See My Work
           </motion.a>
           <motion.a
             href="/Subra_Sundar_Sinha_Resume.pdf"
             download="Subra_Sundar_Sinha_Resume.pdf"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 bg-purple-500 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors flex items-center justify-center gap-2"
+            className="px-6 py-3 bg-purple-500 text-white rounded-full font-semibold flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all"
           >
             <FileText className="w-5 h-5" />
-            <span className="text-white">Download Resume</span>
+            <span>Download Resume</span>
           </motion.a>
         </div>
       </motion.div>
+
+      {/* Floating Icons */}
+      {floatingIcons.map((item, index) => (
+        <motion.div
+          key={index}
+          className="absolute hidden md:block"
+          style={{ top: item.top, left: item.left, right: item.right, zIndex: 20 }}
+          variants={floatVariants}
+          animate="animate"
+          whileHover={{ scale: 1.2, rotate: 360 }}
+        >
+          {item.icon}
+        </motion.div>
+      ))}
     </section>
   );
 };
