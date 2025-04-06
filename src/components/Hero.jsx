@@ -164,14 +164,14 @@ const Hero = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="relative text-center px-4 z-10 max-w-full"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold font-mono mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 break-words whitespace-pre-wrap min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem]">
+        <h1 className="select-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold font-mono mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 break-words whitespace-pre-wrap min-h-[4rem] sm:min-h-[5rem] md:min-h-[6rem]">
           {nameText.length === "Subhra Sundar Sinha".length ? "Subhra Sundar Sinha" : nameText || "Subhra Sundar Sinha"}
         </h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-300 font-mono min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem]"
+          className="select-none text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-300 font-mono min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem]"
         >
           {skillsText || "MERN Stack Developer"}
         </motion.p>

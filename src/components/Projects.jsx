@@ -6,8 +6,8 @@ import {
   FaFigma,
   FaGithub,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd } from "react-icons/si";
-
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd,SiAntdesign } from "react-icons/si";
+import { TbBrandFramerMotion,TbBrandRedux } from "react-icons/tb";
 // Project data with tech tags and icons
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Fullstack E-Commerce UI Design",
     description: "Designed in Figma",
-    link: "https://www.figma.com/file/0L75DybthJbkseHmrnjifr/E-commerce",
+    link: "https://www.figma.com/proto/0L75DYbtPJbkseHmrnjifr/E-commerce?page-id=0%3A1&type=design&node-id=2773-5758&viewport=-4969%2C13715%2C0.53&t=8NMQxBelehrkjLja-1&scaling=min-zoom&starting-point-node-id=1%3A2",
     date: "December 2023",
     tags: ["UI/UX", "Figma"],
     icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
@@ -29,11 +29,12 @@ const projects = [
   {
     title: "ReactJS Todo List App",
     description: "Create, edit, and organize todos",
-    link: "https://65c23e33dd138d0c346e0f18--loquacious-truffle-da2c10.netlify.app/",
+    link: "https://reactwebnotejs.netlify.app/",
     date: "",
     tags: ["ReactJS", "Frontend"],
     icons: [<FaReact className="w-6 h-6 text-cyan-500" />],
   },
+  //Project Ariyas
   {
     title: "Ariyas - Discover Local Artisans",
     description: "MERN stack e-commerce platform",
@@ -45,9 +46,27 @@ const projects = [
       <SiExpress className="w-6 h-6 text-gray-400" />,
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <FaNodeJs className="w-6 h-6 text-green-600" />,
-      // <SiMaterialui className="w-6 h-6 text-blue-500" />,
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
     ],
   },
+  // Restomaster project
+  {
+    title: "RestoMaster",
+    description: "Restaurant Management System",
+    link: "https://github.com/PavilionRYZ/RMS-IN",
+    date: "",
+    tags: ["MERN", "Fullstack"],
+    icons: [
+      <SiMongodb className="w-6 h-6 text-green-500" />,
+      <SiExpress className="w-6 h-6 text-gray-400" />,
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <FaNodeJs className="w-6 h-6 text-green-600" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
+      <SiAntdesign className="w-6 h-6 text-blue-400" />,
+    ]
+    },
 ];
 
 // Floating icon animation
