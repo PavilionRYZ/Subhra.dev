@@ -6,39 +6,44 @@ import {
   FaFigma,
   FaGithub,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd,SiAntdesign } from "react-icons/si";
-import { TbBrandFramerMotion,TbBrandRedux } from "react-icons/tb";
-// Project data with tech tags and icons
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign } from "react-icons/si";
+import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
+import { IoGlobeOutline } from "react-icons/io5"; // Globe icon for live link
+
+// Project data with tech tags, icons, and links
 const projects = [
   {
     title: "Library Management System UI",
     description: "Designed in Adobe XD",
-    link: "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
+    liveLink: "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
     date: "December 2023",
     tags: ["UI/UX", "Adobe XD"],
     icons: [<SiAdobexd className="w-6 h-6 text-purple-600" />],
+    githubLink: null, // No GitHub repo
   },
   {
     title: "Fullstack E-Commerce UI Design",
     description: "Designed in Figma",
-    link: "https://www.figma.com/proto/0L75DYbtPJbkseHmrnjifr/E-commerce?page-id=0%3A1&type=design&node-id=2773-5758&viewport=-4969%2C13715%2C0.53&t=8NMQxBelehrkjLja-1&scaling=min-zoom&starting-point-node-id=1%3A2",
+    liveLink: "https://www.figma.com/proto/0L75DYbtPJbkseHmrnjifr/E-commerce?page-id=0%3A1&type=design&node-id=2773-5758&viewport=-4969%2C13715%2C0.53&t=8NMQxBelehrkjLja-1&scaling=min-zoom&starting-point-node-id=1%3A2",
     date: "December 2023",
     tags: ["UI/UX", "Figma"],
     icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
+    githubLink: null, // No GitHub repo
   },
   {
     title: "ReactJS Todo List App",
     description: "Create, edit, and organize todos",
-    link: "https://reactwebnotejs.netlify.app/",
+    liveLink: "https://reactwebnotejs.netlify.app/",
     date: "",
     tags: ["ReactJS", "Frontend"],
     icons: [<FaReact className="w-6 h-6 text-cyan-500" />],
+    githubLink: "https://github.com/PavilionRYZ/webnote.github.io",
   },
-  //Project Ariyas
   {
     title: "Ariyas - Discover Local Artisans",
     description: "MERN stack e-commerce platform",
-    link: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
+    liveLink: "https://ariyas-ecommerce.netlify.app/", // Example live link (replace with actual)
+    githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
     date: "January-May 2024",
     tags: ["MERN", "Fullstack"],
     icons: [
@@ -49,12 +54,12 @@ const projects = [
       <TbBrandRedux className="w-6 h-6 text-purple-500" />,
     ],
   },
-  // Restomaster project
   {
     title: "RestoMaster",
     description: "Restaurant Management System",
-    link: "https://github.com/PavilionRYZ/RMS-IN",
-    date: "",
+    liveLink: "https://restomasterfrontend.vercel.app/", // Example live link (replace with actual)
+    githubLink: "https://github.com/PavilionRYZ/RMS-IN",
+    date: "February-April 2025",
     tags: ["MERN", "Fullstack"],
     icons: [
       <SiMongodb className="w-6 h-6 text-green-500" />,
@@ -65,8 +70,8 @@ const projects = [
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
       <TbBrandRedux className="w-6 h-6 text-purple-500" />,
       <SiAntdesign className="w-6 h-6 text-blue-400" />,
-    ]
-    },
+    ],
+  },
 ];
 
 // Floating icon animation
@@ -91,9 +96,13 @@ const cardVariants = {
   }),
 };
 
-const Projects = ({darkMode,setDarkMode}) => {
+const Projects = ({ darkMode, setDarkMode }) => {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden"
+      data-scroll-section
+    >
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -117,11 +126,15 @@ const Projects = ({darkMode,setDarkMode}) => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="text-4xl font-bold mb-12 text-center font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
+        data-scroll
       >
         Projects
       </motion.h2>
 
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div
+        className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
+        data-scroll
+      >
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -131,7 +144,7 @@ const Projects = ({darkMode,setDarkMode}) => {
             viewport={{ once: true }}
             variants={cardVariants}
             whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 0, 255, 0.3)" }}
-            className= {`${darkMode ? "bg-gray-800" : "bg-gray-100"} p-6 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all relative overflow-hidden`}
+            className={`${darkMode ? "bg-gray-800" : "bg-gray-100"} p-6 rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all relative overflow-hidden`}
           >
             {/* Floating Icons */}
             <div className="absolute top-2 right-2 flex gap-2">
@@ -160,14 +173,35 @@ const Projects = ({darkMode,setDarkMode}) => {
                 </span>
               ))}
             </div>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 font-mono underline"
-            >
-              View Project <FaGithub className="ml-2 w-4 h-4" />
-            </a>
+
+            {/* Links */}
+            <div className="flex flex-col gap-2">
+              {project.liveLink && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-mono underline"
+                >
+                  Live Site <IoGlobeOutline className="ml-2 w-4 h-4" />
+                </a>
+              )}
+              {project.githubLink ? (
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-mono underline"
+                >
+                  GitHub Repo <FaGithub className="ml-2 w-4 h-4" />
+                </a>
+              ) : (
+                project.liveLink && (
+                  <p className="text-gray-500 text-sm font-mono">No GitHub repository available</p>
+                )
+              )}
+            </div>
+
             {project.date && (
               <p className="mt-2 text-gray-500 text-sm font-mono">{project.date}</p>
             )}

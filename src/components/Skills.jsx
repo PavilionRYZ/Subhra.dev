@@ -1,19 +1,21 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
-  FaHtml5,        // HTML5
-  FaCss3Alt,      // CSS3
-  FaJsSquare,     // JavaScript
-  FaReact,        // ReactJS
-  FaNodeJs,       // Node.js
-  FaGitAlt,       // Git
-  FaGithub,       // GitHub
-  FaFigma,        // Figma
-  FaTools,        // Postman
-  FaLanguage,     // Languages
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
+  FaFigma,
+  FaTools,
+  FaLanguage,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd } from "react-icons/si"; // Specific icons from Simple Icons
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAxios,SiAntdesign,SiMaterialdesign  } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
+import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
+import { IoLogoFirebase } from "react-icons/io5";
 // Skill categories with specific tech icons
 const skills = {
   "Web Technologies": [
@@ -21,13 +23,12 @@ const skills = {
     { name: "CSS", icon: <FaCss3Alt className="w-6 h-6 text-blue-500" /> },
     { name: "JavaScript", icon: <FaJsSquare className="w-6 h-6 text-yellow-500" /> },
     { name: "MongoDB", icon: <SiMongodb className="w-6 h-6 text-green-500" /> },
-    { name: "REST API", icon: <FaTools className="w-6 h-6 text-purple-500" /> }, // No specific REST API icon, using FaTools
+    { name: "REST API", icon: <FaTools className="w-6 h-6 text-purple-500" /> },
   ],
   "Web Frameworks": [
     { name: "ReactJS", icon: <FaReact className="w-6 h-6 text-cyan-500" /> },
     { name: "Node.js", icon: <FaNodeJs className="w-6 h-6 text-green-600" /> },
     { name: "Express.js", icon: <SiExpress className="w-6 h-6 text-gray-400" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="w-6 h-6 text-blue-400" /> },
   ],
   "UI/UX Design": [
     { name: "Figma", icon: <FaFigma className="w-6 h-6 text-pink-500" /> },
@@ -37,7 +38,15 @@ const skills = {
     { name: "Git", icon: <FaGitAlt className="w-6 h-6 text-red-500" /> },
     { name: "GitHub", icon: <FaGithub className="w-6 h-6 text-gray-300" /> },
     { name: "VS Code", icon: <DiVisualstudio className="w-6 h-6 text-blue-600" /> },
-    { name: "Postman", icon: <FaTools className="w-6 h-6 text-orange-500" /> }, // No specific Postman icon, using FaTools
+    { name: "Postman", icon: <FaTools className="w-6 h-6 text-orange-500" /> },
+  ],
+  "Libraries":[
+    { name: "Redux", icon: <TbBrandRedux className="w-6 h-6 text-purple-500" /> },
+    { name: "Framer Motion", icon: <TbBrandFramerMotion className="w-6 h-6 text-pink-500" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="w-6 h-6 text-blue-400" /> },
+    { name: "Ant Design", icon: <SiAntdesign className="w-6 h-6 text-blue-500" /> },
+    { name: "Firebase", icon: <IoLogoFirebase className="w-6 h-6 text-yellow-500" /> },
+    { name: "Material UI", icon: <SiMaterialdesign  className="w-6 h-6 text-blue-500" /> },
   ],
   "Languages": [
     { name: "Bengali", icon: <FaLanguage className="w-6 h-6 text-yellow-500" /> },
@@ -60,7 +69,11 @@ const floatVariants = {
 
 const Skills = ({ darkMode, setDarkMode }) => {
   return (
-    <section id="skills" className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+    <section
+      id="skills"
+      className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden"
+      data-scroll-section
+    >
       {/* Subtle Background SVG */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -79,11 +92,12 @@ const Skills = ({ darkMode, setDarkMode }) => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
         className="text-4xl font-bold mb-12 text-center font-mono bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400"
+        data-scroll
       >
         Tech Stack
       </motion.h2>
 
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10" data-scroll>
         {Object.entries(skills).map(([category, items], index) => (
           <motion.div
             key={category}
@@ -95,30 +109,37 @@ const Skills = ({ darkMode, setDarkMode }) => {
             className={`p-6 rounded-lg shadow-lg border hover:border-blue-500 transition-all ${
               darkMode ? "bg-gray-700 border-gray-500" : "bg-gray-100 border-gray-300"
             }`}
-            
-            
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-4 font-mono">{category}</h3>
-            <ul className="space-y-4">
-              {items.map((skill, idx) => (
-                <motion.li
-                  key={skill.name}
-                  className="flex items-center space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 + index * 0.2 }}
-                >
-                  <motion.div
-                    variants={floatVariants}
-                    animate="animate"
-                    whileHover={{ scale: 1.2, rotate: 15 }}
+            <ul
+              className="grid grid-cols-1 md:grid-cols-2 gap-4"
+              style={{
+                gridTemplateRows: "repeat(4, auto)", // Limit to 4 rows per column
+                maxWidth: "100%", // Prevent overflow
+              }}
+            >
+              {items.map((skill, idx) => {
+                const columnIndex = Math.floor(idx / 4); // Column index for animation delay
+                return (
+                  <motion.li
+                    key={skill.name}
+                    className="flex items-center space-x-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 + columnIndex * 0.2 }}
                   >
-                    {skill.icon}
-                  </motion.div>
-                  <span className={`${darkMode ? "text-white" : "text-black"} font-mono`}>{skill.name}</span>
-                </motion.li>
-              ))}
+                    <motion.div
+                      variants={floatVariants}
+                      animate="animate"
+                      whileHover={{ scale: 1.2, rotate: 15 }}
+                    >
+                      {skill.icon}
+                    </motion.div>
+                    <span className={`${darkMode ? "text-white" : "text-black"} font-mono`}>{skill.name}</span>
+                  </motion.li>
+                );
+              })}
             </ul>
           </motion.div>
         ))}
