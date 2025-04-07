@@ -72,6 +72,20 @@ const projects = [
       <SiAntdesign className="w-6 h-6 text-blue-400" />,
     ],
   },
+    //github readme generator 
+  {
+    title: "GitHub Readme Generator",
+    description: "Generate GitHub READMEs with ease",
+    liveLink: "https://readmegeneratorgor-github.netlify.app", // Example live link (replace with actual)
+    githubLink: "https://github.com/PavilionRYZ/githubreadmegenerator.io.git",
+    date: "April 2025",
+    tags: ["ReactJs"],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+    ]
+  }
 ];
 
 // Floating icon animation
