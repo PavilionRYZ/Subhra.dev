@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -7,12 +7,15 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MarvelLoading from "./components/MarvelLoading"
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-
+  const [isLoading, setIsLoading] = useState(true);
   return (
-    <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-100"} min-h-screen transition-colors duration-300`}>
+ <Fragment>
+  {isLoading && <MarvelLoading onLoadingComplete={() => setIsLoading(false)} />}
+     <div className={`${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-100"} min-h-screen transition-colors duration-300`}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Hero />
       <About />
@@ -22,6 +25,7 @@ function App() {
       <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
       <Footer />
     </div>
+ </Fragment>
   );
 }
 
