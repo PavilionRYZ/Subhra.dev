@@ -7,7 +7,8 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
-import { IoGlobeOutline } from "react-icons/io5"; // Globe icon for live link
+import { IoGlobeOutline } from "react-icons/io5"; 
+import { BsStars } from "react-icons/bs";
 
 // Project data with tech tags, icons, and links
 const projects = [
@@ -83,6 +84,21 @@ const projects = [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+    ]
+  },
+  //genai tweeter post generator
+  {
+    title: "AI Twitter Post Generatorr",
+    description: "A modern web application that leverages AI to generate viral tweets instantly.",
+    liveLink: "https://tweetgen.netlify.app/",
+    githubLink: "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
+    date: "May 2025",
+    tags: ["ReactJs"],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+      <BsStars className="w-6 h-6 text-blue-500"/>
     ]
   }
 ];
