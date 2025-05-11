@@ -93,7 +93,7 @@ const projects = [
     liveLink: "https://tweetgen.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
     date: "May 2025",
-    tags: ["ReactJs"],
+    tags: ["ReactJs","GenAi","Framer Motion"],
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
