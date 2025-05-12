@@ -88,7 +88,7 @@ const projects = [
   },
   //genai tweeter post generator
   {
-    title: "AI Twitter Post Generatorr",
+    title: "AI Twitter Post Generator",
     description: "A modern web application that leverages AI to generate viral tweets instantly.",
     liveLink: "https://tweetgen.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
@@ -100,7 +100,22 @@ const projects = [
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
       <BsStars className="w-6 h-6 text-blue-500"/>
     ]
-  }
+  },
+  {
+    title: "AI-Powered Nutrition Checker",
+    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown.",
+    liveLink: "https://nutrimind-ai.netlify.app/",
+    githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
+    date: "May 2025",
+    tags: ["ReactJs","GenAi","Framer Motion"],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+      <BsStars className="w-6 h-6 text-blue-500"/>
+    ]
+  },
+
 ];
 
 // Floating icon animation
