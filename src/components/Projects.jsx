@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
-import { IoGlobeOutline } from "react-icons/io5"; 
+import { IoGlobeOutline } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
 
 // Project data with tech tags, icons, and links
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Fullstack E-Commerce UI Design",
     description: "Designed in Figma",
-    liveLink: "https://www.figma.com/proto/0L75DYbtPJbkseHmrnjifr/E-commerce?page-id=0%3A1&type=design&node-id=2773-5758&viewport=-4969%2C13715%2C0.53&t=8NMQxBelehrkjLja-1&scaling=min-zoom&starting-point-node-id=1%3A2",
+    liveLink: "https://www.figma.com/design/0L75DYbtPJbkseHmrnjifr/E-commerce?node-id=0-1&t=ODzxEupHm681rFMU-1",
     date: "December 2023",
     tags: ["UI/UX", "Figma"],
     icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
@@ -42,7 +42,7 @@ const projects = [
   {
     title: "Ariyas - Discover Local Artisans",
     description: "MERN stack e-commerce platform",
-    liveLink: "https://ariyas-ecommerce.netlify.app/", // Example live link (replace with actual)
+    liveLink: "https://ariyas-ecommerce.netlify.app/", 
     githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
     date: "January-May 2024",
     tags: ["MERN", "Fullstack"],
@@ -57,7 +57,7 @@ const projects = [
   {
     title: "RestoMaster",
     description: "Restaurant Management System",
-    liveLink: "https://restomasterfrontend.vercel.app/", // Example live link (replace with actual)
+    liveLink: "https://restomasterfrontend.vercel.app/", 
     githubLink: "https://github.com/PavilionRYZ/RMS-IN",
     date: "February-April 2025",
     tags: ["MERN", "Fullstack"],
@@ -72,7 +72,7 @@ const projects = [
       <SiAntdesign className="w-6 h-6 text-blue-400" />,
     ],
   },
-    //github readme generator 
+  //github readme generator 
   {
     title: "GitHub Readme Generator",
     description: "Generate GitHub READMEs with ease",
@@ -93,12 +93,12 @@ const projects = [
     liveLink: "https://tweetgen.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
     date: "May 2025",
-    tags: ["ReactJs","GenAi","Framer Motion"],
+    tags: ["ReactJs", "GenAi", "Framer Motion"],
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <BsStars className="w-6 h-6 text-blue-500"/>
+      <BsStars className="w-6 h-6 text-blue-500" />
     ]
   },
   {
@@ -107,12 +107,12 @@ const projects = [
     liveLink: "https://nutrimind-ai.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
     date: "May 2025",
-    tags: ["ReactJs","GenAi","Framer Motion"],
+    tags: ["ReactJs", "GenAi", "Framer Motion"],
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <BsStars className="w-6 h-6 text-blue-500"/>
+      <BsStars className="w-6 h-6 text-blue-500" />
     ]
   },
 
