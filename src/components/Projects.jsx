@@ -4,10 +4,11 @@ import {
   FaNodeJs,
   FaFigma,
   FaGithub,
+  FaStripe
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign, SiShadcnui } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
-import { IoGlobeOutline } from "react-icons/io5";
+import { IoGlobeOutline, IoLogoFirebase } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
 
 // Project data with tech tags, icons, and links
@@ -42,7 +43,7 @@ const projects = [
   {
     title: "Ariyas - Discover Local Artisans",
     description: "MERN stack e-commerce platform",
-    liveLink: "https://ariyas-ecommerce.netlify.app/", 
+    liveLink: "https://ariyas-ecommerce.netlify.app/",
     githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
     date: "January-May 2024",
     tags: ["MERN", "Fullstack"],
@@ -57,7 +58,7 @@ const projects = [
   {
     title: "RestoMaster",
     description: "Restaurant Management System",
-    liveLink: "https://restomasterfrontend.vercel.app/", 
+    liveLink: "https://restomasterfrontend.vercel.app/",
     githubLink: "https://github.com/PavilionRYZ/RMS-IN",
     date: "February-April 2025",
     tags: ["MERN", "Fullstack"],
@@ -115,6 +116,28 @@ const projects = [
       <BsStars className="w-6 h-6 text-blue-500" />
     ]
   },
+  {
+    title: "NovaMart",
+    description: "E-commerce Platform",
+    liveLink: "https://novamart-zeta.vercel.app/",
+    githubLink: "https://github.com/PavilionRYZ/NovaMart.github.io",
+    date: "june 2025",
+    tags: ["MERN", "Fullstack"],
+    icons: [
+      <SiMongodb className="w-6 h-6 text-green-500" />,
+      <SiExpress className="w-6 h-6 text-gray-400" />,
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <FaNodeJs className="w-6 h-6 text-green-600" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
+      <SiAntdesign className="w-6 h-6 text-blue-400" />,
+      <SiShadcnui className="w-6 h-6 text-gray-400" />,
+      <FaStripe className="w-6 h-6 text-purple-500" />,
+      <IoLogoFirebase className="w-6 h-6 text-yellow-500" />,
+    ],
+  },
+
 
 ];
 
