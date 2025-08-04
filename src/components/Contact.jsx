@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { FaGithub, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { SlSocialLinkedin } from "react-icons/sl";

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -39,11 +38,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       variants={navVariants}
       initial="hidden"
       animate="visible"
-      className={`fixed top-0 w-full z-20 ${
-        darkMode
-          ? "bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800"
-          : "bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200"
-      } p-4 shadow-lg`}
+      className={`fixed top-0 w-full z-20 ${darkMode
+        ? "bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800"
+        : "bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200"
+        } p-4 shadow-lg`}
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
@@ -68,7 +66,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             >
               <a
                 href={link.href}
-                className="relative text-lg font-mono text-gray-300 hover:text-blue-400 transition-colors duration-300 group"
+                className={`relative text-lg font-mono  ${darkMode ? "text-gray-300" : "text-gray-700"
+                  } hover:text-blue-400 transition-colors duration-300 group`}
               >
                 {link.label}
                 {/* Underline effect */}
@@ -84,9 +83,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           >
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className={`p-2 rounded-full ${
-                darkMode ? "hover:bg-gray-700" : "hover:bg-gray-400"
-              } transition-colors flex items-center justify-center group`}
+              className={`p-2 rounded-full ${darkMode ? "hover:bg-gray-700" : "hover:bg-gray-400"
+                } transition-colors flex items-center justify-center group`}
             >
               {darkMode ? (
                 <Sun className="w-5 h-5 text-yellow-400 group-hover:text-yellow-300" />
@@ -105,7 +103,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           className="md:hidden p-2 rounded-full focus:outline-none text-black-800 hover:text-blue-400 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className={`w-6 h-6 ${darkMode ? "text-gray-300" : "text-gray-800"}`} />}
         </motion.button>
       </div>
 
@@ -128,9 +126,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               initial="closed"
               animate="open"
               exit="closed"
-              className={`fixed top-0 right-0 h-screen w-3/4 ${
-                darkMode ? "bg-gray-900" : "bg-gray-200"
-              } p-6 shadow-2xl z-20 md:hidden`}
+              className={`fixed top-0 right-0 h-screen w-3/4 ${darkMode ? "bg-gray-900" : "bg-gray-200"
+                } p-6 shadow-2xl z-20 md:hidden`}
             >
               <div className="flex justify-end">
                 <button
@@ -168,16 +165,15 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       setDarkMode(!darkMode);
                       setIsOpen(false);
                     }}
-                    className={`p-2 rounded-full ${
-                      darkMode ? "hover:bg-gray-700" : "hover:bg-gray-400"
-                    } transition-colors flex items-center justify-center gap-2 mx-auto`}
+                    className={`p-2 rounded-full ${darkMode ? "hover:bg-gray-700" : "hover:bg-gray-400"
+                      } transition-colors flex items-center justify-center gap-2 mx-auto`}
                   >
                     {darkMode ? (
                       <Sun className="w-5 h-5 text-yellow-400" />
                     ) : (
                       <Moon className="w-5 h-5 text-blue-400" />
                     )}
-                    <span className="text-gray-300">
+                    <span className={`${darkMode ? "text-gray-300" : "text-gray-800"}`}>
                       {darkMode ? "Light Mode" : "Dark Mode"}
                     </span>
                   </button>
