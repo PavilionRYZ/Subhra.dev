@@ -14,80 +14,19 @@ import { BsStars } from "react-icons/bs";
 // Project data with tech tags, icons, and links
 const projects = [
   {
-    title: "Library Management System UI",
-    description: "Designed in Adobe XD",
-    liveLink: "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
-    date: "December 2023",
-    tags: ["UI/UX", "Adobe XD"],
-    icons: [<SiAdobexd className="w-6 h-6 text-purple-600" />],
-    githubLink: null, // No GitHub repo
-  },
-  {
-    title: "Fullstack E-Commerce UI Design",
-    description: "Designed in Figma",
-    liveLink: "https://www.figma.com/design/0L75DYbtPJbkseHmrnjifr/E-commerce?node-id=0-1&t=ODzxEupHm681rFMU-1",
-    date: "December 2023",
-    tags: ["UI/UX", "Figma"],
-    icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
-    githubLink: null, // No GitHub repo
-  },
-  {
-    title: "ReactJS Todo List App",
-    description: "Create, edit, and organize todos",
-    liveLink: "https://reactwebnotejs.netlify.app/",
-    date: "",
-    tags: ["ReactJS", "Frontend"],
-    icons: [<FaReact className="w-6 h-6 text-cyan-500" />],
-    githubLink: "https://github.com/PavilionRYZ/webnote.github.io",
-  },
-  {
-    title: "Ariyas - Discover Local Artisans",
-    description: "MERN stack e-commerce platform",
-    liveLink: "https://ariyas-ecommerce.netlify.app/",
-    githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
-    date: "January-May 2024",
-    tags: ["MERN", "Fullstack"],
-    icons: [
-      <SiMongodb className="w-6 h-6 text-green-500" />,
-      <SiExpress className="w-6 h-6 text-gray-400" />,
-      <FaReact className="w-6 h-6 text-cyan-500" />,
-      <FaNodeJs className="w-6 h-6 text-green-600" />,
-      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
-    ],
-  },
-  {
-    title: "RestoMaster",
-    description: "Restaurant Management System",
-    liveLink: "https://restomasterfrontend.vercel.app/",
-    githubLink: "https://github.com/PavilionRYZ/RMS-IN",
-    date: "February-April 2025",
-    tags: ["MERN", "Fullstack"],
-    icons: [
-      <SiMongodb className="w-6 h-6 text-green-500" />,
-      <SiExpress className="w-6 h-6 text-gray-400" />,
-      <FaReact className="w-6 h-6 text-cyan-500" />,
-      <FaNodeJs className="w-6 h-6 text-green-600" />,
-      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
-      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
-      <SiAntdesign className="w-6 h-6 text-blue-400" />,
-    ],
-  },
-  //github readme generator 
-  {
-    title: "GitHub Readme Generator",
-    description: "Generate GitHub READMEs with ease",
-    liveLink: "https://readmegeneratorgor-github.netlify.app", // Example live link (replace with actual)
-    githubLink: "https://github.com/PavilionRYZ/githubreadmegenerator.io.git",
-    date: "April 2025",
-    tags: ["ReactJs"],
+    title: "AI-Powered Nutrition Checker",
+    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown.",
+    liveLink: "https://nutrimind-ai.netlify.app/",
+    githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
+    date: "May 2025",
+    tags: ["ReactJs", "GenAi", "Framer Motion"],
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+      <BsStars className="w-6 h-6 text-blue-500" />
     ]
   },
-  //genai tweeter post generator
   {
     title: "AI Twitter Post Generator",
     description: "A modern web application that leverages AI to generate viral tweets instantly.",
@@ -103,26 +42,33 @@ const projects = [
     ]
   },
   {
-    title: "AI-Powered Nutrition Checker",
-    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown.",
-    liveLink: "https://nutrimind-ai.netlify.app/",
-    githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
-    date: "May 2025",
-    tags: ["ReactJs", "GenAi", "Framer Motion"],
+    title: "RestoMaster",
+    description: "Restaurant Management System",
+    liveLink: "https://restomasterfrontend.vercel.app/",
+    githubLink: "https://github.com/PavilionRYZ/RMS-IN",
+    date: "February-28/25 March-9/25",
+    tags: ["MERN", "Fullstack", "Grok Ai", "Cursor Ai IDE"],
+
     icons: [
+      <SiMongodb className="w-6 h-6 text-green-500" />,
+      <SiExpress className="w-6 h-6 text-gray-400" />,
       <FaReact className="w-6 h-6 text-cyan-500" />,
+      <FaNodeJs className="w-6 h-6 text-green-600" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <BsStars className="w-6 h-6 text-blue-500" />
-    ]
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
+      <SiAntdesign className="w-6 h-6 text-blue-400" />,
+    ],
   },
   {
     title: "NovaMart",
     description: "E-commerce Platform",
     liveLink: "https://novamart-zeta.vercel.app/",
     githubLink: "https://github.com/PavilionRYZ/NovaMart.github.io",
-    date: "june 2025",
-    tags: ["MERN", "Fullstack"],
+    date: "june-10/25-june-15/25",
+
+
+    tags: ["MERN", "Fullstack", "Grok Ai", "Trae Ai IDE"],
     icons: [
       <SiMongodb className="w-6 h-6 text-green-500" />,
       <SiExpress className="w-6 h-6 text-gray-400" />,
@@ -137,7 +83,61 @@ const projects = [
       <IoLogoFirebase className="w-6 h-6 text-yellow-500" />,
     ],
   },
-
+  {
+    title: "Ariyas - Discover Local Artisans",
+    description: "MERN stack e-commerce platform",
+    // liveLink: "https://ariyas-ecommerce.netlify.app/",
+    githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
+    date: "January-May 2024",
+    tags: ["MERN", "Fullstack"],
+    icons: [
+      <SiMongodb className="w-6 h-6 text-green-500" />,
+      <SiExpress className="w-6 h-6 text-gray-400" />,
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <FaNodeJs className="w-6 h-6 text-green-600" />,
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
+    ],
+  },
+  {
+    title: "GitHub Readme Generator",
+    description: "Generate GitHub READMEs with ease",
+    liveLink: "https://readmegeneratorgor-github.netlify.app",
+    githubLink: "https://github.com/PavilionRYZ/githubreadmegenerator.io.git",
+    date: "April 2025",
+    tags: ["ReactJs"],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+    ]
+  },
+  {
+    title: "ReactJS Todo List App",
+    description: "Create, edit, and organize todos",
+    liveLink: "https://reactwebnotejs.netlify.app/",
+    date: "",
+    tags: ["ReactJS", "Frontend"],
+    icons: [<FaReact className="w-6 h-6 text-cyan-500" />],
+    githubLink: "https://github.com/PavilionRYZ/webnote.github.io",
+  },
+  {
+    title: "Library Management System UI",
+    description: "Designed in Adobe XD",
+    liveLink: "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
+    date: "December 2023",
+    tags: ["UI/UX", "Adobe XD"],
+    icons: [<SiAdobexd className="w-6 h-6 text-purple-600" />],
+    githubLink: null,
+  },
+  {
+    title: "Fullstack E-Commerce UI Design",
+    description: "Designed in Figma",
+    liveLink: "https://www.figma.com/design/0L75DYbtPJbkseHmrnjifr/E-commerce?node-id=0-1&t=ODzxEupHm681rFMU-1",
+    date: "December 2023",
+    tags: ["UI/UX", "Figma"],
+    icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
+    githubLink: null,
+  },
 
 ];
 
