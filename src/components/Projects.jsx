@@ -26,11 +26,11 @@ const projects = [
   },
   {
     title: "AI-Powered Nutrition Checker",
-    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown powered by Gemini 2.5 Flash.",
+    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown powered by Spoonacular API - Food Database.",
     liveLink: "https://nutrimind-ai.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
     date: "May 2025",
-    tags: ["ReactJs", "GenAi", "Framer Motion","Gemini Api","Cursor Ai IDE"],
+    tags: ["ReactJs", "GenAi", "Framer Motion", "Cursor Ai IDE"],
 
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
@@ -110,19 +110,19 @@ const projects = [
       <TbBrandRedux className="w-6 h-6 text-purple-500" />,
     ],
   },
-  {
-    title: "GitHub Readme Generator",
-    description: "Generate GitHub READMEs with ease",
-    liveLink: "https://readmegeneratorgor-github.netlify.app",
-    githubLink: "https://github.com/PavilionRYZ/githubreadmegenerator.io.git",
-    date: "April 2025",
-    tags: ["ReactJs"],
-    icons: [
-      <FaReact className="w-6 h-6 text-cyan-500" />,
-      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
-      <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-    ]
-  },
+  // {
+  //   title: "GitHub Readme Generator",
+  //   description: "Generate GitHub READMEs with ease",
+  //   liveLink: "https://readmegeneratorgor-github.netlify.app",
+  //   githubLink: "https://github.com/PavilionRYZ/githubreadmegenerator.io.git",
+  //   date: "April 2025",
+  //   tags: ["ReactJs"],
+  //   icons: [
+  //     <FaReact className="w-6 h-6 text-cyan-500" />,
+  //     <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+  //     <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
+  //   ]
+  // },
   {
     title: "ReactJS Todo List App",
     description: "Create, edit, and organize todos",
