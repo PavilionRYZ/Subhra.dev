@@ -12,10 +12,15 @@ import {
   FaTools,
   FaLanguage,
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAxios,SiAntdesign,SiMaterialdesign  } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAxios, SiAntdesign, SiMaterialdesign, SiClaude, SiRender, SiNetlify } from "react-icons/si";
 import { DiVisualstudio } from "react-icons/di";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
-import { IoLogoFirebase } from "react-icons/io5";
+import { AiFillOpenAI } from "react-icons/ai";
+import { GoCopilot } from "react-icons/go";
+import { BsCursorFill } from "react-icons/bs"
+import { IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
+import Trae from "../assets/trae-color.svg";
+import Grok from "../assets/grok.svg";
 // Skill categories with specific tech icons
 const skills = {
   "Web Technologies": [
@@ -38,21 +43,37 @@ const skills = {
     { name: "Git", icon: <FaGitAlt className="w-6 h-6 text-red-500" /> },
     { name: "GitHub", icon: <FaGithub className="w-6 h-6 text-gray-300" /> },
     { name: "VS Code", icon: <DiVisualstudio className="w-6 h-6 text-blue-600" /> },
+    { name: "Cursor Ai IDE", icon: <BsCursorFill className="w-6 h-6 text-gray-300" /> },
+    { name: "Trae Ai IDE", icon: <img src={Trae} alt="Trae" className="w-6 h-6" /> },
     { name: "Postman", icon: <FaTools className="w-6 h-6 text-orange-500" /> },
   ],
-  "Libraries":[
+  "Libraries": [
     { name: "Redux", icon: <TbBrandRedux className="w-6 h-6 text-purple-500" /> },
     { name: "Framer Motion", icon: <TbBrandFramerMotion className="w-6 h-6 text-pink-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="w-6 h-6 text-blue-400" /> },
     { name: "Ant Design", icon: <SiAntdesign className="w-6 h-6 text-blue-500" /> },
     { name: "Firebase", icon: <IoLogoFirebase className="w-6 h-6 text-yellow-500" /> },
-    { name: "Material UI", icon: <SiMaterialdesign  className="w-6 h-6 text-blue-500" /> },
+    { name: "Material UI", icon: <SiMaterialdesign className="w-6 h-6 text-blue-500" /> },
   ],
   "Languages": [
     { name: "Bengali", icon: <FaLanguage className="w-6 h-6 text-yellow-500" /> },
     { name: "English", icon: <FaLanguage className="w-6 h-6 text-blue-300" /> },
     { name: "Hindi", icon: <FaLanguage className="w-6 h-6 text-red-500" /> },
   ],
+  "Ai Tools": [
+    { name: "OpenAI", icon: <AiFillOpenAI className="w-6 h-6 text-gray-300" /> },
+    { name: "Claude", icon: <SiClaude className="w-6 h-6 text-orange-500" /> },
+    { name: "Grok Ai", icon: <img src={Grok} alt="Grok" className="w-6 h-6" /> },
+
+    { name: "Copilot", icon: <GoCopilot className="w-6 h-6 text-gray-300" /> },
+  ],
+  "Hosting": [
+    { name: "Netlify", icon: <SiNetlify className="w-6 h-6 text-green-500" /> },
+    { name: "Render", icon: <SiRender className="w-6 h-6 text-blue-500" /> },
+    { name: "Vercel", icon: <IoLogoVercel className="w-6 h-6 text-white" /> },
+  ],
+
+
 };
 
 // Floating animation for icons
@@ -106,9 +127,8 @@ const Skills = ({ darkMode, setDarkMode }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 255, 0.2)" }}
-            className={`p-6 rounded-lg shadow-lg border hover:border-blue-500 transition-all ${
-              darkMode ? "bg-gray-700 border-gray-500" : "bg-gray-100 border-gray-300"
-            }`}
+            className={`p-6 rounded-lg shadow-lg border hover:border-blue-500 transition-all ${darkMode ? "bg-gray-700 border-gray-500" : "bg-gray-100 border-gray-300"
+              }`}
           >
             <h3 className="text-xl font-semibold text-blue-400 mb-4 font-mono">{category}</h3>
             <ul
