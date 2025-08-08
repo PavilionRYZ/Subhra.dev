@@ -21,6 +21,7 @@ import { BsCursorFill } from "react-icons/bs"
 import { IoLogoFirebase, IoLogoVercel } from "react-icons/io5";
 import Trae from "../assets/trae-color.svg";
 import Grok from "../assets/grok.svg";
+import Cursor from "../assets/cursor.svg";
 // Skill categories with specific tech icons
 const skills = {
   "Web Technologies": [
@@ -43,7 +44,8 @@ const skills = {
     { name: "Git", icon: <FaGitAlt className="w-6 h-6 text-red-500" /> },
     { name: "GitHub", icon: <FaGithub className="w-6 h-6 text-gray-300" /> },
     { name: "VS Code", icon: <DiVisualstudio className="w-6 h-6 text-blue-600" /> },
-    { name: "Cursor Ai IDE", icon: <BsCursorFill className="w-6 h-6 text-gray-300" /> },
+    { name: "Cursor Ai IDE", icon: <img src={Cursor} alt="Cursor" className="w-6 h-6" /> },
+
     { name: "Trae Ai IDE", icon: <img src={Trae} alt="Trae" className="w-6 h-6" /> },
     { name: "Postman", icon: <FaTools className="w-6 h-6 text-orange-500" /> },
   ],
