@@ -84,9 +84,12 @@ const About = () => {
             className="md:text-lg text-sm text-gray-300 max-w-2xl font-mono leading-relaxed"
           >
             A highly motivated <span className="text-blue-400">MERN stack developer</span> with a solid foundation in web development, proficient in front-end technologies such as <span className="text-purple-400">HTML, CSS, JavaScript, ReactJS</span> and back-end technologies including <span className="text-green-400">Node.js, Express.js, MongoDB</span>.
-            Skilled in building responsive UI designs using modern frameworks like <span className="text-teal-400">Tailwind CSS</span> and experienced with essential tools such as <span className="text-cyan-400">Git, GitHub,Postman and Visual Studio Code</span>. Successfully developed comprehensive web applications—like e-commerce and restaurant management platforms—demonstrating expertise in <span className="text-yellow-400">full-stack development</span> and project management.
-            Passionate about <span className="text-pink-400">UI/UX design</span> with hands-on experience in <span className="text-fuchsia-400">Figma</span> and <span className="text-orange-400">Adobe XD</span>.I am always eager to learn and implement new technologies. Enthusiastic about photography, traveling, and gaming. Fluent in Bengali, English, and Hindi.
+            Skilled in building responsive UI designs using modern frameworks like <span className="text-teal-400">Tailwind CSS</span> and experienced with essential tools such as <span className="text-cyan-400">Git, GitHub, Postman, and Visual Studio Code</span>. Successfully developed comprehensive web applications—like e-commerce and restaurant management platforms—demonstrating expertise in <span className="text-yellow-400">full-stack development</span> and project management.
+            Passionate about <span className="text-pink-400">UI/UX design</span> with hands-on experience in <span className="text-fuchsia-400">Figma</span> and <span className="text-orange-400">Adobe XD</span>.
+            I have also leveraged AI-enabled IDEs such as <span className="text-cyan-400">Visual Studio Code with Copilot, Cursor AI IDE, and Trae AI IDE</span>, along with large language models including <span className="text-indigo-400">ChatGPT, Perplexity, Claude, and Grok</span> to accelerate code production and enhance development efficiency.
+            I am always eager to learn and implement new technologies. Enthusiastic about photography, traveling, and gaming. Fluent in Bengali, English, and Hindi.
           </motion.p>
+
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
