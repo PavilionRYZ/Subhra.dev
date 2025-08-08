@@ -14,12 +14,24 @@ import { BsStars } from "react-icons/bs";
 // Project data with tech tags, icons, and links
 const projects = [
   {
+    title: "Gemini AI Chatbot",
+    description: "A modern, intelligent chatbot powered by Google's Gemini AI created by using reactjs,tailwindcss,shadcn-ui,Lucide,powered by Gemini 2.5 Flash",
+    liveLink: "https://horizonchatbot.netlify.app/",
+    githubLink: "https://github.com/PavilionRYZ/Horizon_chat_bot.github.io.git",
+    date: "August-6 2025",
+    tags: ["ReactJs", "Frontend", "Trae Ai IDE", "Gemini Api", "Tailwindcss"],
+    icons: [<FaReact className="w-6 h-6 text-cyan-500" />,
+    <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+    <BsStars className="w-6 h-6 text-blue-500" />],
+  },
+  {
     title: "AI-Powered Nutrition Checker",
-    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown.",
+    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown powered by Gemini 2.5 Flash.",
     liveLink: "https://nutrimind-ai.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
     date: "May 2025",
-    tags: ["ReactJs", "GenAi", "Framer Motion"],
+    tags: ["ReactJs", "GenAi", "Framer Motion","Gemini Api","Cursor Ai IDE"],
+
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
@@ -138,6 +150,8 @@ const projects = [
     icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
     githubLink: null,
   },
+  // Gemini AI Chatbot A modern, intelligent chatbot powered by Google's Gemini AI creatred by using reactjs,taileindcss,chadcn ui,Lucide,powered by Gemini 2.5 Flash
+
 
 ];
 
