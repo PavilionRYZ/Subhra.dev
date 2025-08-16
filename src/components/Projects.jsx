@@ -58,7 +58,7 @@ const projects = [
     description: "Restaurant Management System",
     liveLink: "https://restomasterfrontend.vercel.app/",
     githubLink: "https://github.com/PavilionRYZ/RMS-IN",
-    date: "February-28/25 March-9/25",
+    date: "February-28/25 April-2/25",
     tags: ["MERN", "Fullstack", "Grok Ai", "Cursor Ai IDE"],
 
     icons: [
