@@ -6,7 +6,7 @@ import {
   FaGithub,
   FaStripe
 } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign, SiShadcnui } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign, SiShadcnui, SiTauri, SiDeepgram } from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
 import { IoGlobeOutline, IoLogoFirebase } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
@@ -95,6 +95,19 @@ const projects = [
       <FaStripe className="w-6 h-6 text-purple-500" />,
       <IoLogoFirebase className="w-6 h-6 text-yellow-500" />,
     ],
+  },
+  //   Voice to Text Dictation App
+  // A modern, cross-platform push-to-talk voice dictation desktop app built with Tauri v2, React 19, Tailwind CSS, and Deepgram Nova-2 real-time transcription.
+  {
+    title: "Voice to Text Dictation",
+    description: "A modern, cross-platform push-to-talk voice dictation desktop app built with Tauri v2, React 19, Tailwind CSS, and Deepgram Nova-2 real-time transcription.",
+    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-12-23%20134635.png?alt=media&token=ca1ed09b-eeb8-43f0-93f0-638eba831f0a",
+    date: "",
+    tags: ["ReactJS", "Tauri v2", "Deepgram Nova-2 ", "Frontend"],
+    icons: [<FaReact className="w-6 h-6 text-cyan-500" />,
+    <SiTauri className="w-6 h-6 text-yellow-400" />,
+    <SiDeepgram className="w-6 h-6 text-white" />],
+    githubLink: "https://github.com/PavilionRYZ/VoiceToText.github.io.git",
   },
   {
     title: "Ariyas - Discover Local Artisans",
@@ -286,7 +299,7 @@ const Projects = ({ darkMode, setDarkMode }) => {
                     variants={floatVariants}
                     animate="animate"
                     whileHover={{ scale: 1.2, rotate: 15 }}
-                    // className=" bg-opacity-50 p-1 rounded-full"
+                  // className=" bg-opacity-50 p-1 rounded-full"
                   >
                     {icon}
                   </motion.div>

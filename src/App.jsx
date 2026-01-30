@@ -5,6 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import MarvelLoading from "./components/MarvelLoading"
@@ -22,6 +23,7 @@ function App() {
       <Skills darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Education darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Projects darkMode={darkMode} setDarkMode={setDarkMode}/>
+      {/* <Certifications darkMode={darkMode} setDarkMode={setDarkMode}/> */}
       <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
       <Footer />
     </div>
