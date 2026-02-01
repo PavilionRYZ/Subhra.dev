@@ -23,7 +23,7 @@ function App() {
       <Skills darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Education darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Projects darkMode={darkMode} setDarkMode={setDarkMode}/>
-      {/* <Certifications darkMode={darkMode} setDarkMode={setDarkMode}/> */}
+      <Certifications darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Contact darkMode={darkMode} setDarkMode={setDarkMode} />
       <Footer />
     </div>
