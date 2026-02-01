@@ -30,8 +30,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
     { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
     { href: "#certifications", label: "Certifications" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (
