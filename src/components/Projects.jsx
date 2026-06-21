@@ -1,13 +1,19 @@
 import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaFigma, FaGithub, FaStripe } from "react-icons/fa";
 import {
-  FaReact,
-  FaNodeJs,
-  FaFigma,
-  FaGithub,
-  FaStripe
-} from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAdobexd, SiAntdesign, SiShadcnui, SiTauri, SiDeepgram } from "react-icons/si";
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiAdobexd,
+  SiHono,
+  SiAntdesign,
+  SiShadcnui,
+  SiTauri,
+  SiDeepgram,
+} from "react-icons/si";
 import { TbBrandFramerMotion, TbBrandRedux } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { IoGlobeOutline, IoLogoFirebase } from "react-icons/io5";
 import { BsStars } from "react-icons/bs";
 
@@ -15,20 +21,26 @@ import { BsStars } from "react-icons/bs";
 const projects = [
   {
     title: "Gemini AI Chatbot",
-    description: "A modern, intelligent chatbot powered by Google's Gemini AI created by using reactjs,tailwindcss,shadcn-ui,Lucide,powered by Gemini 2.5 Flash",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20183852.png?alt=media&token=a53de125-fba7-44cc-97cd-3a034fb9a1ef",
+    description:
+      "A modern, intelligent chatbot powered by Google's Gemini AI created by using reactjs,tailwindcss,shadcn-ui,Lucide,powered by Gemini 2.5 Flash",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20183852.png?alt=media&token=a53de125-fba7-44cc-97cd-3a034fb9a1ef",
     liveLink: "https://horizonchatbot.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/Horizon_chat_bot.github.io.git",
     date: "August-6 2025",
     tags: ["ReactJs", "Frontend", "Trae Ai IDE", "Gemini Api", "Tailwindcss"],
-    icons: [<FaReact className="w-6 h-6 text-cyan-500" />,
-    <SiTailwindcss className="w-6 h-6 text-blue-400" />,
-    <BsStars className="w-6 h-6 text-blue-500" />],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <BsStars className="w-6 h-6 text-blue-500" />,
+    ],
   },
   {
     title: "AI-Powered Nutrition Checker",
-    description: "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown powered by Spoonacular API - Food Database.",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20180909.png?alt=media&token=209e159c-92bf-45b4-a3c7-31d344b1bea5",
+    description:
+      "A modern web application to analyze recipes and provide a smart, visual nutritional breakdown powered by Spoonacular API - Food Database.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20180909.png?alt=media&token=209e159c-92bf-45b4-a3c7-31d344b1bea5",
     liveLink: "https://nutrimind-ai.netlify.app/",
     githubLink: "https://github.com/PavilionRYZ/NutriMind-Ai.github.io.git",
     date: "May 2025",
@@ -37,28 +49,50 @@ const projects = [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <BsStars className="w-6 h-6 text-blue-500" />
-    ]
+      <BsStars className="w-6 h-6 text-blue-500" />,
+    ],
   },
   {
     title: "AI Twitter Post Generator",
-    description: "A modern web application that leverages AI to generate viral tweets instantly.",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181040.png?alt=media&token=dc613090-2da9-4b8c-90a7-c71bccac1493",
+    description:
+      "A modern web application that leverages AI to generate viral tweets instantly.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181040.png?alt=media&token=dc613090-2da9-4b8c-90a7-c71bccac1493",
     liveLink: "https://tweetgen.netlify.app/",
-    githubLink: "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
+    githubLink:
+      "https://github.com/PavilionRYZ/Gen_Ai_twitter_post_generator.github.io",
     date: "May 2025",
     tags: ["ReactJs", "GenAi", "Framer Motion"],
     icons: [
       <FaReact className="w-6 h-6 text-cyan-500" />,
       <SiTailwindcss className="w-6 h-6 text-blue-400" />,
       <TbBrandFramerMotion className="w-6 h-6 text-blue-500" />,
-      <BsStars className="w-6 h-6 text-blue-500" />
-    ]
+      <BsStars className="w-6 h-6 text-blue-500" />,
+    ],
+  },
+  {
+    title: "FinEx",
+    description: "Raw Transaction Parser",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202026-06-21%20112352.png?alt=media&token=9b39ede2-8219-4f14-a392-a8016076ead6",
+    liveLink: "https://finextransactionparser.onrender.com/",
+    githubLink: "https://github.com/PavilionRYZ/Vessify-Finance-Tracker",
+    date: "January-10/26 January-20/26",
+    tags: ["Fullstack", "NextJs", "HonoJs", "PostgreSQL"],
+    icons: [
+      <BiLogoPostgresql className="w-6 h-6 text-blue-900" />,
+      <SiHono className="w-6 h-6 text-yellow-400" />,
+      <RiNextjsFill className="w-6 h-6 text-black" />,
+      <FaNodeJs className="w-6 h-6 text-green-600" />,
+      <SiTailwindcss className="w-6 h-6 text-blue-400" />,
+      <TbBrandRedux className="w-6 h-6 text-purple-500" />,
+    ],
   },
   {
     title: "RestoMaster",
     description: "Restaurant Management System",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-05-19%20124923.png?alt=media&token=d00c3e1c-39cf-42d2-8ecb-bcbc82b21d30", // Add your project image path here
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-05-19%20124923.png?alt=media&token=d00c3e1c-39cf-42d2-8ecb-bcbc82b21d30", // Add your project image path here
     liveLink: "https://restomasterfrontend.vercel.app/",
     githubLink: "https://github.com/PavilionRYZ/RMS-IN",
     date: "February-28/25 April-2/25",
@@ -77,7 +111,8 @@ const projects = [
   {
     title: "NovaMart",
     description: "E-commerce Platform",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20180733.png?alt=media&token=ba09f912-6db9-48e7-a57a-a984a97adc06",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20180733.png?alt=media&token=ba09f912-6db9-48e7-a57a-a984a97adc06",
     liveLink: "https://novamart-zeta.vercel.app/",
     githubLink: "https://github.com/PavilionRYZ/NovaMart.github.io",
     date: "june-10/25-june-15/25",
@@ -100,20 +135,25 @@ const projects = [
   // A modern, cross-platform push-to-talk voice dictation desktop app built with Tauri v2, React 19, Tailwind CSS, and Deepgram Nova-2 real-time transcription.
   {
     title: "Voice to Text Dictation",
-    description: "A modern, cross-platform push-to-talk voice dictation desktop app built with Tauri v2, React 19, Tailwind CSS, and Deepgram Nova-2 real-time transcription.",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-12-23%20134635.png?alt=media&token=ca1ed09b-eeb8-43f0-93f0-638eba831f0a",
+    description:
+      "A modern, cross-platform push-to-talk voice dictation desktop app built with Tauri v2, React 19, Tailwind CSS, and Deepgram Nova-2 real-time transcription.",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-12-23%20134635.png?alt=media&token=ca1ed09b-eeb8-43f0-93f0-638eba831f0a",
     date: "",
     tags: ["ReactJS", "Tauri v2", "Deepgram Nova-2 ", "Frontend"],
-    icons: [<FaReact className="w-6 h-6 text-cyan-500" />,
-    <SiTauri className="w-6 h-6 text-yellow-400" />,
-    <SiDeepgram className="w-6 h-6 text-white" />],
+    icons: [
+      <FaReact className="w-6 h-6 text-cyan-500" />,
+      <SiTauri className="w-6 h-6 text-yellow-400" />,
+      <SiDeepgram className="w-6 h-6 text-white" />,
+    ],
     githubLink: "https://github.com/PavilionRYZ/VoiceToText.github.io.git",
   },
   {
     title: "Ariyas - Discover Local Artisans",
     description: "MERN stack e-commerce platform",
     image: "/images/ariyas.jpg", // Add your project image path here
-    githubLink: "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
+    githubLink:
+      "https://github.com/shubhasarkar53/Ariyas-The-Ecommerce-Project",
     date: "January-May 2024",
     tags: ["MERN", "Fullstack"],
     icons: [
@@ -127,7 +167,8 @@ const projects = [
   {
     title: "ReactJS Todo List App",
     description: "Create, edit, and organize todos",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181211.png?alt=media&token=bf4c6691-0d07-44c7-893b-1ef70075bd2a",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181211.png?alt=media&token=bf4c6691-0d07-44c7-893b-1ef70075bd2a",
     liveLink: "https://reactwebnotejs.netlify.app/",
     date: "",
     tags: ["ReactJS", "Frontend"],
@@ -137,8 +178,10 @@ const projects = [
   {
     title: "Library Management System UI",
     description: "Designed in Adobe XD",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181554.png?alt=media&token=f20f02db-b947-4593-83c8-1acc3d1b4f3d",
-    liveLink: "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181554.png?alt=media&token=f20f02db-b947-4593-83c8-1acc3d1b4f3d",
+    liveLink:
+      "https://xd.adobe.com/view/d76fe86e-1644-44f8-aae0-ef21beada59c-823c/?fullscreen",
     date: "December 2023",
     tags: ["UI/UX", "Adobe XD"],
     icons: [<SiAdobexd className="w-6 h-6 text-purple-600" />],
@@ -147,8 +190,10 @@ const projects = [
   {
     title: "Fullstack E-Commerce UI Design",
     description: "Designed in Figma",
-    image: "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181445.png?alt=media&token=f78f9c34-6217-4e35-a0c2-0af040465c26",
-    liveLink: "https://www.figma.com/design/0L75DYbtPJbkseHmrnjifr/E-commerce?node-id=0-1&t=ODzxEupHm681rFMU-1",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/finerestate-c1c19.appspot.com/o/myJourney%2FScreenshot%202025-09-02%20181445.png?alt=media&token=f78f9c34-6217-4e35-a0c2-0af040465c26",
+    liveLink:
+      "https://www.figma.com/design/0L75DYbtPJbkseHmrnjifr/E-commerce?node-id=0-1&t=ODzxEupHm681rFMU-1",
     date: "December 2023",
     tags: ["UI/UX", "Figma"],
     icons: [<FaFigma className="w-6 h-6 text-pink-500" />],
@@ -183,8 +228,8 @@ const imageVariants = {
   rest: { scale: 1 },
   hover: {
     scale: 1.1,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
+    transition: { duration: 0.3, ease: "easeOut" },
+  },
 };
 
 const Projects = ({ darkMode, setDarkMode }) => {
@@ -198,7 +243,12 @@ const Projects = ({ darkMode, setDarkMode }) => {
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="circuit" width="60" height="60" patternUnits="userSpaceOnUse">
+            <pattern
+              id="circuit"
+              width="60"
+              height="60"
+              patternUnits="userSpaceOnUse"
+            >
               <path
                 d="M 0 30 H 20 V 10 H 40 V 50 H 60"
                 fill="none"
@@ -234,7 +284,10 @@ const Projects = ({ darkMode, setDarkMode }) => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(0, 0, 255, 0.3)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 15px 30px rgba(0, 0, 255, 0.3)",
+            }}
             className={`${darkMode ? "bg-gray-800" : "bg-gray-100"} rounded-lg shadow-lg border border-gray-700 hover:border-blue-500 transition-all relative overflow-hidden`}
           >
             {/* Project Image */}
@@ -249,8 +302,9 @@ const Projects = ({ darkMode, setDarkMode }) => {
                 alt={project.title}
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.parentNode.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                  e.target.style.display = "none";
+                  e.target.parentNode.style.background =
+                    "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
                   e.target.parentNode.innerHTML = `<div class="flex items-center justify-center h-full text-white font-mono text-lg">${project.title}</div>`;
                 }}
               />
@@ -299,7 +353,7 @@ const Projects = ({ darkMode, setDarkMode }) => {
                     variants={floatVariants}
                     animate="animate"
                     whileHover={{ scale: 1.2, rotate: 15 }}
-                  // className=" bg-opacity-50 p-1 rounded-full"
+                    // className=" bg-opacity-50 p-1 rounded-full"
                   >
                     {icon}
                   </motion.div>
@@ -307,8 +361,12 @@ const Projects = ({ darkMode, setDarkMode }) => {
               </div>
 
               {/* Project Content */}
-              <h3 className="text-xl font-semibold text-blue-400 font-mono mb-2">{project.title}</h3>
-              <p className={`${darkMode ? "text-gray-300" : "text-gray-600"} font-mono mb-4 text-sm leading-relaxed`}>
+              <h3 className="text-xl font-semibold text-blue-400 font-mono mb-2">
+                {project.title}
+              </h3>
+              <p
+                className={`${darkMode ? "text-gray-300" : "text-gray-600"} font-mono mb-4 text-sm leading-relaxed`}
+              >
                 {project.description}
               </p>
 
@@ -347,13 +405,17 @@ const Projects = ({ darkMode, setDarkMode }) => {
                   </a>
                 ) : (
                   project.liveLink && (
-                    <p className="text-gray-500 text-xs font-mono">No GitHub repository available</p>
+                    <p className="text-gray-500 text-xs font-mono">
+                      No GitHub repository available
+                    </p>
                   )
                 )}
               </div>
 
               {project.date && (
-                <p className="mt-3 text-gray-500 text-xs font-mono">{project.date}</p>
+                <p className="mt-3 text-gray-500 text-xs font-mono">
+                  {project.date}
+                </p>
               )}
             </div>
           </motion.div>
